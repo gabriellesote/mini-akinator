@@ -1,0 +1,15 @@
+#           0         1           2        3            4         5
+# animais = {'gato', 'cachorro', 'sapo', 'carangueijo', 'lesma', 'lobo'}
+# resposta = 0
+# while len(animais) > 1:
+#     print("O seu animal é vertebrado? ")
+#     print("1- Sim\n 2- Não")
+#     resposta = int()
+#     if resposta == 1:
+#         animais.remove('carangueijo')
+#         animais.remove('lesma')
+#     else:
+#          animais.remove('gato')
+#          animais.remove('cachorro')
+#          animais.remove('sapo')
+#          animais.remove('lobo')
