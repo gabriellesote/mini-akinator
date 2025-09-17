@@ -1,14 +1,21 @@
 class Animal:
-    def __init__(self, nome, especie, pelagem, classe, tamanho, terreste, aquatico, voador ):
+    def __init__(self, nome, felino=False, canino=False, mamifero=False, ave=False, reptil=False, anfibio=False,
+                 terrestre=False, aquatico=False, voador=False, pequeno=False, medio=False, grande=False,
+                 pelos=False, escama=False, penas=False):
         self.nome = nome
-        self.especie = especie
-        self.pelagem = pelagem
-        self.classe = classe
-        self.tamanho = tamanho
-        self.terrestre = terreste
+        self.felino = felino
+        self.canino = canino
+        self.mamifero = mamifero
+        self.ave = ave
+        self.reptil = reptil
+        self.anfibio = anfibio
+        self.terrestre = terrestre
         self.aquatico = aquatico
         self.voador = voador
-    
-    def toString(self):
-        print(f'{self.nome},{self.especie},{self.pelagem}, {self.classe}, {self.tamanho}, {self.terrestre}, {self.aquatico}, {self.voador}')
-        pass
+        self.pequeno = pequeno
+        self.medio = medio
+        self.grande = grande
+        self.pelos = pelos
+        self.escama = escama
+        self.penas = penas
+

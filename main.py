@@ -1,24 +1,32 @@
 from animal import Animal
 
-print("Escolha um desses animais: \n"
-      "01- Gato\n"
-      "02- Cachorro\n"
-      "03- Calopsita\n"
-      "04- Papagaio\n"
-      "05- Corvo\n"
-      "06- Leão\n"
-      "07- Lobo\n"
-      "08- Tartaruga Marinha\n"
-      "09- Crocodilo\n"
-      "10- Sapo\n")
+animais = [
+    Animal("Gato", felino=True, mamifero=True,
+           terrestre=True, pequeno=True, pelos=True),
+    Animal("Cachorro", canino=True, mamifero=True,
+           terrestre=True, medio=True, pelos=True),
+    Animal("Calopsita", ave=True, terrestre=True,
+           voador=True, pequeno=True, penas=True),
+    Animal("Papagaio", ave=True, terrestre=True,
+           voador=True, pequeno=True, penas=True),
+    Animal("Corvo", ave=True, terrestre=True,
+           voador=True, medio=True, penas=True),
+    Animal("Leão", felino=True, mamifero=True,
+           terrestre=True, grande=True, pelos=True),
+    Animal("Lobo", canino=True, mamifero=True,
+           terrestre=True, medio=True, pelos=True),
+    Animal("Tartaruga Marinha", reptil=True, terrestre=True,
+           aquatico=True, medio=True, escama=True),
+    Animal("Crocodilo", reptil=True, terrestre=True,
+           aquatico=True, grande=True, escama=True),
+    Animal("Sapo", anfibio=True, terrestre=True,
+           aquatico=True, pequeno=True, escama=False)
+]
 
-gato = Animal("gato", "felino", "pelos", "mamifero", "pequeno", True, False, False)
+print("Escolha um dos animais abaixo: ")
+for i in animais:
+    print(i.nome)
+    
+animal_selecionado = []
 
-gato.toString()
-
-animais = [gato]
-
-for i 
-
-print("\nAgora irei tentar adivinhar qual animal você pensou!")
-
+while 
