@@ -1,10 +1,27 @@
 class Animal:
-    def __init__(self, nome, felino=False, canino=False, mamifero=False, ave=False, reptil=False, anfibio=False,
-                 terrestre=False, aquatico=False, voador=False, pequeno=False, medio=False, grande=False,
-                 pelos=False, escama=False, penas=False):
+    def __init__(self, nome, 
+                 felino=False,
+                 canino=False,
+                 peixe=False,
+                 mamifero=False,
+                 ave=False,
+                 reptil=False, 
+                 anfibio=False,
+                 terrestre=False, 
+                 aquatico=False, 
+                 voador=False, 
+                 pequeno=False, 
+                 medio=False, 
+                 grande=False,
+                 pelos=False, 
+                 escama=False, 
+                 penas=False):
+        
+        
         self.nome = nome
         self.felino = felino
         self.canino = canino
+        self.peixe = peixe
         self.mamifero = mamifero
         self.ave = ave
         self.reptil = reptil
