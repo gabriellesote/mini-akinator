@@ -15,12 +15,23 @@ animais = [
            terrestre=True, grande=True, pelos=True),
     Animal("Lobo", canino=True, mamifero=True,
            terrestre=True, medio=True, pelos=True),
-    Animal("Golfinho", mamifero=True,
-           aquatico=True, medio=True, terrestre=False, pelos=False),
+    Animal("Peixe-Palhaço", peixe=True,
+           aquatico=True, pequeno=True, terrestre=False, pelos=False),
     Animal("Tubarão", peixe=True,
            aquatico=True, grande=True, terrestre=False, escama=True),
-    Animal("Polvo", molusco=True,
-           aquatico=True, medio=True, terrestre=False, escama=False)
+    Animal("Salmão", peixe=True, aquatico=True,
+           medio=True, escama=True),
+    
+    Animal("Pinguim", ave=True, terrestre=True,
+           aquatico=True, medio=True, penas=True, voador=False),
+    Animal("Tartaruga", reptil=True, terrestre=True,
+           aquatico=True, medio=True, escama=True),
+    Animal("Sapo", anfibio=True, terrestre=True,
+           aquatico=True, pequeno=True, escama=False),
+    Animal("Elefante", mamifero=True, terrestre=True,
+           grande=True, pelos=False),
+    Animal("Morcego", mamifero=True, terrestre=True,
+           voador=True, pequeno=True, pelos=True)
 ]
 
 print("Escolha um dos animais abaixo: ")
@@ -28,7 +39,6 @@ print("Escolha um dos animais abaixo: ")
 for i in animais:
     print(i.nome)
 
-filtro_animal = []
 
 perguntas = {
     "terrestre": "Seu animal é terrestre?",
@@ -46,8 +56,6 @@ perguntas = {
     "penas": "Seu animal tem penas?"
 }
 
-filtro = animais[:]
-
 
 ordem_perguntas = [
     "terrestre", "aquatico", "voador",     
@@ -56,9 +64,20 @@ ordem_perguntas = [
     "pelos", "escama", "penas"              
 ]
 
+filtro = animais[:] # começa com tds os animais
 
+contador = 0
 for chave in ordem_perguntas:
-       if len(filtro) <= 1:
-              break
-       print(perguntas[chave])
-       reposta = bool(int(input("0 - Não | 1- Sim")))
+    contador += 1
+    print(f"\n{contador}: {perguntas[chave]}")
+    resposta = bool(int(input("0 - Não | 1 - Sim\n")))
+
+    # filtro atualizado usando list comprehension
+    filtro = [animal for animal in filtro if getattr(animal, chave) == resposta]
+
+    if len(filtro) <= 1:  # se sobrou 1, pode parar
+        break
+
+print("\n=== Resultado final ===")
+for animal in filtro:
+    print("-", animal.nome)
